@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
 import "./App.css";
-import Item from './Item';
+import Item from "./Item";
 
 class App extends Component {
   render() {
@@ -54,6 +54,8 @@ class App extends Component {
           </label>
           <button type="submit">Add</button>
         </form>
+
+        <h2>Total is ${invoice.itemList.total().toFixed(2)}</h2>
 
         <ul>
           {invoice.itemList.items.map((item, i) => (
